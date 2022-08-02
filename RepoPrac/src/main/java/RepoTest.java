@@ -10,6 +10,7 @@
 public class RepoTest {
     public static void main(String[] args) {
         System.out.println("Hello world");
+        System.out.println("I am here to save you but you have to pay me");
     }
     
 }
