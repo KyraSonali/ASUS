@@ -47,7 +47,7 @@ public class SignUpScreen extends javax.swing.JPanel {
         jPanel2.add(usernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 180, 30));
 
         SignUpButton.setText("Sign Up");
-        jPanel2.add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, 150, 30));
+        jPanel2.add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 150, 30));
 
         cloudLbl3.setIcon(new javax.swing.ImageIcon("C:\\Users\\kyrab\\Documents\\NetBeansProjects\\PAT2022\\src\\main\\resources\\clouds.png")); // NOI18N
         jPanel2.add(cloudLbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, -1, 210));
