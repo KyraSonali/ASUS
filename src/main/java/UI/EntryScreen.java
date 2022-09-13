@@ -27,37 +27,52 @@ public class EntryScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         jFileChooser1 = new javax.swing.JFileChooser();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        usernameField = new javax.swing.JTextField();
+        passwordField = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        cloudLbl3 = new javax.swing.JLabel();
+        cloudLbl1 = new javax.swing.JLabel();
+        cloudLbl2 = new javax.swing.JLabel();
+        cloudLbl = new javax.swing.JLabel();
+        userProfileLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\kyrab\\Documents\\NetBeansProjects\\PAT2022\\src\\main\\resources\\clouds.png")); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 270, 230));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\kyrab\\Documents\\NetBeansProjects\\PAT2022\\src\\main\\resources\\clouds.png")); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 270, 230));
+        usernameField.setText("Username");
+        jPanel2.add(usernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 180, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 440, 390));
+        passwordField.setText("passwrod");
+        jPanel2.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 180, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
-        );
+        jButton1.setText("Sign Up");
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 150, 30));
+
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Log In");
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 150, 30));
+
+        cloudLbl3.setIcon(new javax.swing.ImageIcon("C:\\Users\\kyrab\\Documents\\NetBeansProjects\\PAT2022\\src\\main\\resources\\clouds.png")); // NOI18N
+        jPanel2.add(cloudLbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, -1, 210));
+
+        cloudLbl1.setIcon(new javax.swing.ImageIcon("C:\\Users\\kyrab\\Documents\\NetBeansProjects\\PAT2022\\src\\main\\resources\\clouds.png")); // NOI18N
+        jPanel2.add(cloudLbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 270, 230));
+
+        cloudLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clouds.png"))); // NOI18N
+        jPanel2.add(cloudLbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 210, 260, 180));
+
+        cloudLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clouds.png"))); // NOI18N
+        jPanel2.add(cloudLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 260, 180));
+
+        userProfileLbl.setIcon(new javax.swing.ImageIcon("C:\\Users\\kyrab\\Documents\\NetBeansProjects\\PAT2022\\src\\main\\resources\\user (2).png")); // NOI18N
+        jPanel2.add(userProfileLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 170, 150));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 560, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -98,10 +113,16 @@ public class EntryScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel cloudLbl;
+    private javax.swing.JLabel cloudLbl1;
+    private javax.swing.JLabel cloudLbl2;
+    private javax.swing.JLabel cloudLbl3;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JFileChooser jFileChooser1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField passwordField;
+    private javax.swing.JLabel userProfileLbl;
+    private javax.swing.JTextField usernameField;
     // End of variables declaration//GEN-END:variables
 }
