@@ -29,8 +29,9 @@ public class HomeScreen extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        signLbl = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        treeLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,18 +39,18 @@ public class HomeScreen extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Diarise things");
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 130, 30));
-
-        jButton2.setText("Home");
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 140, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signPost (2).png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 230, 260));
+        signLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signPost (2).png"))); // NOI18N
+        signLbl.setText("jLabel1");
+        jPanel1.add(signLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 230, 260));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forest.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 480));
+        jLabel2.setText("Date");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 120, 40));
+
+        treeLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forest.png"))); // NOI18N
+        jPanel1.add(treeLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 490));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,8 +104,9 @@ public class HomeScreen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel signLbl;
+    private javax.swing.JLabel treeLbl;
     // End of variables declaration//GEN-END:variables
 }
