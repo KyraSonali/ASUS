@@ -18,9 +18,7 @@ import javax.swing.DefaultListModel;
  */
 public class DiaryLibrary extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DiaryLibrary
-     */
+    //populate list
     UserManager k;
     private int currentUser;
     private String x;

@@ -151,6 +151,7 @@ public class UserManager {
 
     public void genfunction(int currentUserId, int inMonth) {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+        //line graphs
         String funct1 = "mood";
         String funct2 = "sleep";
         String query = "SELECT date,SleepScore,MoodScore\n"
@@ -160,9 +161,11 @@ public class UserManager {
         try {
             ResultSet data = k.query(query);
             while (data.next()) {
+                //get values
                 LocalDate n = data.getDate("Date").toLocalDate();
                 int sleepScore = data.getInt("SleepScore");
                 int moodScore = data.getInt("MoodScore");
+                //add in loop
                 dataset.addValue(moodScore, funct1, n);
                 dataset.addValue(sleepScore, funct2, n);
             }
@@ -170,6 +173,7 @@ public class UserManager {
             JOptionPane.showMessageDialog(null, "Error in loading graph");
             Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, null, ex);
         }
+        //build chart
         JFreeChart chart = ChartFactory.createLineChart("Pattern ", "Date", "Score", dataset, PlotOrientation.VERTICAL, true, true, true);
         ChartFrame frm = new ChartFrame("Pattern", chart);
         frm.setVisible(true);
