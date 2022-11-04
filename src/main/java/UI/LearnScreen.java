@@ -4,6 +4,12 @@
  */
 package UI;
 
+import BACKEND.User;
+import BACKEND.UserManager;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Kyrab
@@ -13,8 +19,13 @@ public class LearnScreen extends javax.swing.JFrame {
     /**
      * Creates new form InfoScreen
      */
-    public LearnScreen() {
+    private UserManager c;
+
+    public LearnScreen(UserManager inManager) {
         initComponents();
+
+        c = inManager;
+
     }
 
     /**
@@ -27,49 +38,92 @@ public class LearnScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        link1Bttn = new javax.swing.JButton();
+        link3Bttn = new javax.swing.JButton();
+        link6Bttn = new javax.swing.JButton();
+        link2Bttn = new javax.swing.JButton();
+        link4Bttn = new javax.swing.JButton();
+        link5Bttn = new javax.swing.JButton();
+        backBttn = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         bookLbl = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Link1");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 120, 40));
-
-        jButton2.setText("Link2");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 120, 40));
-
-        jButton3.setText("Link6");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 120, 40));
-
-        jButton5.setText("Link4");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 120, 40));
-
-        jButton4.setText("Link5");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        link1Bttn.setText("Why do we get sad?");
+        link1Bttn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                link1BttnActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 120, 40));
+        jPanel1.add(link1Bttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 160, 40));
 
-        jButton6.setText("Link3");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 120, 40));
+        link3Bttn.setText("Why are we lazy?");
+        link3Bttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                link3BttnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(link3Bttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 160, 40));
 
-        jLabel2.setFont(new java.awt.Font("Dialog", 2, 18)); // NOI18N
-        jLabel2.setText("<explain stuff here>");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 230, 40));
+        link6Bttn.setText("what are panick attacks?");
+        link6Bttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                link6BttnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(link6Bttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 170, 40));
 
-        bookLbl.setIcon(new javax.swing.ImageIcon("C:\\Users\\kyrab\\Documents\\NetBeansProjects\\PAT2022\\src\\main\\resources\\book.png")); // NOI18N
+        link2Bttn.setText("what is love?");
+        link2Bttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                link2BttnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(link2Bttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 120, 40));
+
+        link4Bttn.setText("about lonliness ");
+        link4Bttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                link4BttnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(link4Bttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 120, 40));
+
+        link5Bttn.setText("science behind happiness");
+        link5Bttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                link5BttnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(link5Bttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 180, 40));
+
+        backBttn.setText("Back");
+        backBttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBttnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(backBttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 70, 20));
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Ravie", 0, 10)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("With Journey: \nWe help you understand why we feel certain emotions:\n\nTake a look at the following links:\n");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 400, 80));
         jPanel1.add(bookLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Kyra Balliram\\OneDrive\\Documents\\NetBeansProjects\\RepoPrac\\src\\main\\resources\\book.png")); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 500, 390));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,55 +139,54 @@ public class LearnScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void link4BttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_link4BttnActionPerformed
+        c.OpenWebsite("https://www.mind.org.uk/information-support/tips-for-everyday-living/loneliness/about-loneliness/");
+    }//GEN-LAST:event_link4BttnActionPerformed
+
+    private void backBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBttnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        dispose();
+        new HomeScreen(c).setVisible(true);
+    }//GEN-LAST:event_backBttnActionPerformed
+
+    private void link1BttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_link1BttnActionPerformed
+        c.OpenWebsite("https://www.paulekman.com/universal-emotions/what-is-sadness/");
+
+    }//GEN-LAST:event_link1BttnActionPerformed
+
+    private void link6BttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_link6BttnActionPerformed
+        c.OpenWebsite("https://www.mind.org.uk/information-support/types-of-mental-health-problems/anxiety-and-panic-attacks/panic-attacks/");
+    }//GEN-LAST:event_link6BttnActionPerformed
+
+    private void link2BttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_link2BttnActionPerformed
+        c.OpenWebsite("https://theconversation.com/what-is-love-139212");
+    }//GEN-LAST:event_link2BttnActionPerformed
+
+    private void link3BttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_link3BttnActionPerformed
+        c.OpenWebsite("https://www.psychologytoday.com/us/blog/hide-and-seek/201410/the-psychology-laziness");
+    }//GEN-LAST:event_link3BttnActionPerformed
+
+    private void link5BttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_link5BttnActionPerformed
+        c.OpenWebsite("https://www.tonyrobbins.com/mental-health/science-of-happiness/");
+    }//GEN-LAST:event_link5BttnActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LearnScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LearnScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LearnScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LearnScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new LearnScreen().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backBttn;
     private javax.swing.JLabel bookLbl;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton link1Bttn;
+    private javax.swing.JButton link2Bttn;
+    private javax.swing.JButton link3Bttn;
+    private javax.swing.JButton link4Bttn;
+    private javax.swing.JButton link5Bttn;
+    private javax.swing.JButton link6Bttn;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,22 +1,33 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI;
 
+import BACKEND.UserManager;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author Kyrab
+ * @author Kyra Balliram
  */
-public class SignUpScreen extends javax.swing.JPanel {
+public class SignUpScreen extends javax.swing.JFrame {
 
     /**
-     * Creates new form SignUpScreen
+     * Creates new form NewJFrame
      */
-    public SignUpScreen() {
+    private UserManager m;
+
+    public SignUpScreen(UserManager inManager) {
         initComponents();
+        m = inManager;
     }
-//ddggd
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,9 +38,13 @@ public class SignUpScreen extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        emailField = new javax.swing.JTextField();
-        usernameField = new javax.swing.JTextField();
-        SignUpButton = new javax.swing.JButton();
+        nameField = new javax.swing.JTextField();
+        entryErrorLbl = new javax.swing.JLabel();
+        label4 = new javax.swing.JLabel();
+        label2 = new javax.swing.JLabel();
+        label3 = new javax.swing.JLabel();
+        surnameField = new javax.swing.JTextField();
+        SignUpBttn = new javax.swing.JButton();
         cloudLbl3 = new javax.swing.JLabel();
         cloudLbl1 = new javax.swing.JLabel();
         passwordField = new javax.swing.JTextField();
@@ -37,38 +52,53 @@ public class SignUpScreen extends javax.swing.JPanel {
         cloudLbl2 = new javax.swing.JLabel();
         cloudLbl = new javax.swing.JLabel();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.add(nameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 180, 30));
+        jPanel2.add(entryErrorLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 120, 30));
 
-        emailField.setText("email");
-        jPanel2.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 180, 30));
+        label4.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 1, 11)); // NOI18N
+        label4.setForeground(new java.awt.Color(0, 153, 204));
+        label4.setText("NAME:");
+        jPanel2.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 80, -1));
 
-        usernameField.setText("username");
-        jPanel2.add(usernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 180, 30));
+        label2.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 1, 11)); // NOI18N
+        label2.setForeground(new java.awt.Color(0, 153, 204));
+        label2.setText("PASSWORD:");
+        jPanel2.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 80, -1));
 
-        SignUpButton.setText("Sign Up");
-        jPanel2.add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 150, 30));
+        label3.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 1, 11)); // NOI18N
+        label3.setForeground(new java.awt.Color(0, 153, 204));
+        label3.setText("SURNAME:");
+        jPanel2.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 284, 80, 20));
+        jPanel2.add(surnameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 180, 30));
 
-        cloudLbl3.setIcon(new javax.swing.ImageIcon("C:\\Users\\kyrab\\Documents\\NetBeansProjects\\PAT2022\\src\\main\\resources\\clouds.png")); // NOI18N
+        SignUpBttn.setText("Sign Up");
+        SignUpBttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SignUpBttnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(SignUpBttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 150, 30));
         jPanel2.add(cloudLbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, -1, 210));
 
-        cloudLbl1.setIcon(new javax.swing.ImageIcon("C:\\Users\\kyrab\\Documents\\NetBeansProjects\\PAT2022\\src\\main\\resources\\clouds.png")); // NOI18N
-        jPanel2.add(cloudLbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -30, 270, 230));
+        cloudLbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clouds.png"))); // NOI18N
+        jPanel2.add(cloudLbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 270, 230));
+        jPanel2.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 180, 30));
 
-        passwordField.setText("Password");
-        jPanel2.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 180, 30));
-
-        userProfileLbl.setIcon(new javax.swing.ImageIcon("C:\\Users\\kyrab\\Documents\\NetBeansProjects\\PAT2022\\src\\main\\resources\\user (2).png")); // NOI18N
+        userProfileLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user (2).png"))); // NOI18N
         jPanel2.add(userProfileLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 170, 150));
 
         cloudLbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clouds.png"))); // NOI18N
-        jPanel2.add(cloudLbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 210, 260, 180));
+        jPanel2.add(cloudLbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 220, 260, 180));
 
         cloudLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clouds.png"))); // NOI18N
-        jPanel2.add(cloudLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 260, 180));
+        jPanel2.add(cloudLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 260, 180));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 560, Short.MAX_VALUE)
@@ -87,19 +117,45 @@ public class SignUpScreen extends javax.swing.JPanel {
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void SignUpBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpBttnActionPerformed
+        // TODO add your handling code here
+
+        String firstName = nameField.getText();
+        String lastName = surnameField.getText();
+        String password = passwordField.getText();
+
+        try {
+            m.addUser(firstName, lastName, password);
+            dispose();
+            new HomeScreen(m).setVisible(true);
+        } catch (SQLException ex) {
+            entryErrorLbl.setText("Could not access database");
+            System.out.println("UI: Could not access database");
+            Logger.getLogger(SignUpScreen.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+    }//GEN-LAST:event_SignUpBttnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton SignUpButton;
+    private javax.swing.JButton SignUpBttn;
     private javax.swing.JLabel cloudLbl;
     private javax.swing.JLabel cloudLbl1;
     private javax.swing.JLabel cloudLbl2;
     private javax.swing.JLabel cloudLbl3;
-    private javax.swing.JTextField emailField;
+    private javax.swing.JLabel entryErrorLbl;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel label2;
+    private javax.swing.JLabel label3;
+    private javax.swing.JLabel label4;
+    private javax.swing.JTextField nameField;
     private javax.swing.JTextField passwordField;
+    private javax.swing.JTextField surnameField;
     private javax.swing.JLabel userProfileLbl;
-    private javax.swing.JTextField usernameField;
     // End of variables declaration//GEN-END:variables
 }

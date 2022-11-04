@@ -4,6 +4,13 @@
  */
 package UI;
 
+import BACKEND.UserManager;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Kyrab
@@ -12,9 +19,39 @@ public class HomeScreen extends javax.swing.JFrame {
 
     /**
      * Creates new form HomeScreen
+     *
      */
-    public HomeScreen() {
+    private UserManager m;
+
+    public HomeScreen(UserManager inManager) {
         initComponents();
+
+        m = inManager;
+        int rand = (int) ((Math.random() * 6 ) + 0);
+       
+        switch (rand) {
+            case 1:
+                dailyQuoteLbl.setText("'Your only limit is your mind'");
+                break;
+            case 2:
+                dailyQuoteLbl.setText("“Don’t let yesterday take up too much of today.”");
+                break;
+            case 3:
+                dailyQuoteLbl.setText("“Start by making one better food choice every day”");
+                break;
+            case 4:
+                dailyQuoteLbl.setText("'No feeling is final'");
+                break;
+            case 5:
+                dailyQuoteLbl.setText("'find hppiness in what you have'");
+                break;
+            case 6:
+                dailyQuoteLbl.setText("'Goal setting is the secret to a compelling future'");
+                break;
+
+        }
+      
+
     }
 
     /**
@@ -27,11 +64,13 @@ public class HomeScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        DiaryLibraryBttn = new javax.swing.JButton();
+        homeUserLbl = new javax.swing.JLabel();
+        FeelingScreenBttn = new javax.swing.JButton();
+        StatScreenBttn = new javax.swing.JButton();
+        dailyQuoteLbl = new javax.swing.JLabel();
+        DiaryEntryBttn = new javax.swing.JButton();
+        LearnScreenBttn = new javax.swing.JButton();
         treeLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -39,36 +78,63 @@ public class HomeScreen extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 102, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("How do you feel ?");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 160, 30));
-
-        jButton2.setText("Mood Patterns");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        DiaryLibraryBttn.setBackground(new java.awt.Color(0, 102, 51));
+        DiaryLibraryBttn.setText("Diary Library");
+        DiaryLibraryBttn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                DiaryLibraryBttnActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 160, 30));
+        jPanel1.add(DiaryLibraryBttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 415, 160, 30));
 
-        jLabel2.setText("<quote>");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 120, 40));
-
-        jButton3.setText("Diary Entry");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+        homeUserLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/homeUser.png"))); // NOI18N
+        homeUserLbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeUserLblMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 160, 30));
+        jPanel1.add(homeUserLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 130, 100));
 
-        jButton4.setText("Learn Something New");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        FeelingScreenBttn.setBackground(new java.awt.Color(0, 102, 51));
+        FeelingScreenBttn.setText("How do you feel ?");
+        FeelingScreenBttn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                FeelingScreenBttnActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 415, 160, 30));
+        jPanel1.add(FeelingScreenBttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 160, 30));
+
+        StatScreenBttn.setBackground(new java.awt.Color(0, 102, 51));
+        StatScreenBttn.setText("Mood Patterns");
+        StatScreenBttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StatScreenBttnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(StatScreenBttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 160, 30));
+
+        dailyQuoteLbl.setFont(new java.awt.Font("Showcard Gothic", 0, 14)); // NOI18N
+        dailyQuoteLbl.setForeground(new java.awt.Color(0, 51, 0));
+        dailyQuoteLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(dailyQuoteLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 490, 100));
+
+        DiaryEntryBttn.setBackground(new java.awt.Color(0, 102, 51));
+        DiaryEntryBttn.setText("Diary Entry");
+        DiaryEntryBttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DiaryEntryBttnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DiaryEntryBttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 160, 30));
+
+        LearnScreenBttn.setBackground(new java.awt.Color(0, 102, 51));
+        LearnScreenBttn.setText("Learn Something New");
+        LearnScreenBttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LearnScreenBttnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(LearnScreenBttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 160, 30));
 
         treeLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forest.png"))); // NOI18N
         jPanel1.add(treeLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 490));
@@ -87,59 +153,56 @@ public class HomeScreen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void StatScreenBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StatScreenBttnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        dispose();
+        new StatScreen(m).setVisible(true);
+    }//GEN-LAST:event_StatScreenBttnActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void DiaryEntryBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiaryEntryBttnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        dispose();
+        new CalanderScreen(m).setVisible(true);
+    }//GEN-LAST:event_DiaryEntryBttnActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void LearnScreenBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LearnScreenBttnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        dispose();
+        new LearnScreen(m).setVisible(true);
+    }//GEN-LAST:event_LearnScreenBttnActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    private void FeelingScreenBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FeelingScreenBttnActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new FeelingsScreen(m).setVisible(true);
+
+
+    }//GEN-LAST:event_FeelingScreenBttnActionPerformed
+
+    private void homeUserLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeUserLblMouseClicked
+        JFrame k = new JFrame();
+        JOptionPane.showMessageDialog(k, "Username:" + m.getUsername() + "\n" + "Name:" + m.getName());
+
+    }//GEN-LAST:event_homeUserLblMouseClicked
+
+    private void DiaryLibraryBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiaryLibraryBttnActionPerformed
+        dispose();
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            new DiaryLibrary(m).setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(HomeScreen.class.getName()).log(Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+    }//GEN-LAST:event_DiaryLibraryBttnActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new HomeScreen().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton DiaryEntryBttn;
+    private javax.swing.JButton DiaryLibraryBttn;
+    private javax.swing.JButton FeelingScreenBttn;
+    private javax.swing.JButton LearnScreenBttn;
+    private javax.swing.JButton StatScreenBttn;
+    private javax.swing.JLabel dailyQuoteLbl;
+    private javax.swing.JLabel homeUserLbl;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel treeLbl;
     // End of variables declaration//GEN-END:variables

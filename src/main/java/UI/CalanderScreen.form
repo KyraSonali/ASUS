@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.6" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -56,7 +56,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="490" height="380"/>
+              <AbsoluteConstraints x="0" y="0" width="500" height="380"/>
             </Constraint>
           </Constraints>
 
@@ -80,8 +80,11 @@
                 <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel1">
+                <Component class="javax.swing.JLabel" name="dateLbl">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="3"/>
                     </Property>
@@ -89,79 +92,99 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="30" y="10" width="210" height="30"/>
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane14">
+                <Component class="javax.swing.JButton" name="backBttn">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttnActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane15">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="20" y="60" width="390" height="270"/>
+                      <AbsoluteConstraints x="0" y="70" width="440" height="270"/>
                     </Constraint>
                   </Constraints>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable14">
+                    <Component class="javax.swing.JTable" name="janTbl">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
+                          <Table columnCount="7" rowCount="6">
                             <Column editable="true" title="Sun" type="java.lang.Object">
-                              <Data value="1"/>
-                              <Data value="8"/>
-                              <Data value="15"/>
-                              <Data value="22"/>
-                              <Data value="31"/>
-                            </Column>
-                            <Column editable="true" title="Mon" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="2"/>
                               <Data value="9"/>
                               <Data value="16"/>
                               <Data value="23"/>
-                              <Data value=""/>
+                              <Data value="30"/>
                             </Column>
-                            <Column editable="true" title="Tues" type="java.lang.Object">
+                            <Column editable="true" title="Mon" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="3"/>
                               <Data value="10"/>
                               <Data value="17"/>
                               <Data value="24"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Wed" type="java.lang.Object">
+                            <Column editable="true" title="Tues" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="4"/>
                               <Data value="11"/>
                               <Data value="18"/>
                               <Data value="25"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                            <Column editable="true" title="Wed" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="5"/>
                               <Data value="12"/>
                               <Data value="19"/>
                               <Data value="26"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Fri" type="java.lang.Object">
+                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="6"/>
                               <Data value="13"/>
                               <Data value="20"/>
                               <Data value="27"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Sat" type="java.lang.Object">
+                            <Column editable="true" title="Fri" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="7"/>
                               <Data value="14"/>
                               <Data value="21"/>
-                              <Data value="30"/>
+                              <Data value="28"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Sat" type="java.lang.Object">
+                              <Data value="1"/>
+                              <Data value="8"/>
+                              <Data value="15"/>
+                              <Data value="22"/>
+                              <Data value="29"/>
                               <Data value="null"/>
                             </Column>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                          <TableColumnModel selectionModel="0">
+                          <TableColumnModel selectionModel="1">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
@@ -199,14 +222,197 @@
                             </Column>
                           </TableColumnModel>
                         </Property>
+                        <Property name="columnSelectionAllowed" type="boolean" value="true"/>
                         <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
+                        <Property name="selectionModel" type="javax.swing.ListSelectionModel" editor="org.netbeans.modules.form.editors2.JTableSelectionModelEditor">
+                          <JTableSelectionModel selectionMode="0"/>
+                        </Property>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="janTblMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel4">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="99" red="99" type="rgb"/>
+                </Property>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="Feb">
+                    <Property name="tabTitle" type="java.lang.String" value="Feb"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane25">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="-10" y="70" width="450" height="270"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTable" name="febTbl">
+                      <Properties>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                          <Table columnCount="7" rowCount="6">
+                            <Column editable="true" title="Sun" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="6"/>
+                              <Data value="13"/>
+                              <Data value="20"/>
+                              <Data value="27"/>
+                              <Data value="30"/>
+                            </Column>
+                            <Column editable="true" title="Mon" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="7"/>
+                              <Data value="14"/>
+                              <Data value="21"/>
+                              <Data value="28"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Tues" type="java.lang.Object">
+                              <Data value="1"/>
+                              <Data value="8"/>
+                              <Data value="15"/>
+                              <Data value="22"/>
+                              <Data value=""/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Wed" type="java.lang.Object">
+                              <Data value="2"/>
+                              <Data value="9"/>
+                              <Data value="16"/>
+                              <Data value="23"/>
+                              <Data value=""/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                              <Data value="3"/>
+                              <Data value="10"/>
+                              <Data value="17"/>
+                              <Data value="24"/>
+                              <Data value=""/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Fri" type="java.lang.Object">
+                              <Data value="4"/>
+                              <Data value="11"/>
+                              <Data value="18"/>
+                              <Data value="25"/>
+                              <Data value=""/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Sat" type="java.lang.Object">
+                              <Data value="5"/>
+                              <Data value="12"/>
+                              <Data value="19"/>
+                              <Data value="26"/>
+                              <Data value=""/>
+                              <Data value="null"/>
+                            </Column>
+                          </Table>
+                        </Property>
+                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                          <TableColumnModel selectionModel="1">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                          </TableColumnModel>
+                        </Property>
+                        <Property name="columnSelectionAllowed" type="boolean" value="true"/>
+                        <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
+                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="febTblMouseClicked"/>
+                      </Events>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="dateLbl11">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Dialog" size="14" style="3"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&lt;date&gt;"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="backBttn11">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttn11ActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel5">
@@ -223,103 +429,165 @@
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane4" min="-2" pref="373" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="375" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane4" min="-2" pref="270" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane16">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="70" width="440" height="270"/>
+                    </Constraint>
+                  </Constraints>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable4">
+                    <Component class="javax.swing.JTable" name="marchTbl">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
+                          <Table columnCount="7" rowCount="6">
                             <Column editable="true" title="Sun" type="java.lang.Object">
-                              <Data value=""/>
-                              <Data value="5"/>
-                              <Data value="12"/>
-                              <Data value="19"/>
-                              <Data value="26"/>
-                            </Column>
-                            <Column editable="true" title="Mon" type="java.lang.Object">
                               <Data value=""/>
                               <Data value="6"/>
                               <Data value="13"/>
                               <Data value="20"/>
                               <Data value="27"/>
+                              <Data value=""/>
                             </Column>
-                            <Column editable="true" title="Tues" type="java.lang.Object">
+                            <Column editable="true" title="Mon" type="java.lang.Object">
                               <Data value=""/>
                               <Data value="7"/>
                               <Data value="14"/>
                               <Data value="21"/>
                               <Data value="28"/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Wed" type="java.lang.Object">
+                            <Column editable="true" title="Tues" type="java.lang.Object">
                               <Data value="1"/>
                               <Data value="8"/>
                               <Data value="15"/>
                               <Data value="22"/>
-                              <Data value="29"/>
+                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                            <Column editable="true" title="Wed" type="java.lang.Object">
                               <Data value="2"/>
                               <Data value="9"/>
                               <Data value="16"/>
                               <Data value="23"/>
-                              <Data value="30"/>
+                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Fri" type="java.lang.Object">
+                            <Column editable="true" title="Thurs" type="java.lang.Object">
                               <Data value="3"/>
                               <Data value="10"/>
                               <Data value="17"/>
                               <Data value="24"/>
                               <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Sat" type="java.lang.Object">
+                            <Column editable="true" title="Fri" type="java.lang.Object">
                               <Data value="4"/>
                               <Data value="11"/>
                               <Data value="18"/>
                               <Data value="25"/>
+                              <Data value=""/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Sat" type="java.lang.Object">
+                              <Data value="5"/>
+                              <Data value="12"/>
+                              <Data value="19"/>
+                              <Data value="26"/>
+                              <Data value=""/>
                               <Data value="null"/>
                             </Column>
                           </Table>
                         </Property>
+                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                          <TableColumnModel selectionModel="1">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                          </TableColumnModel>
+                        </Property>
+                        <Property name="columnSelectionAllowed" type="boolean" value="true"/>
                         <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="marchTblMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JLabel" name="dateLbl1">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Dialog" size="14" style="3"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&lt;date&gt;"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="backBttn1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttn1ActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel6">
@@ -336,97 +604,86 @@
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane5" min="-2" pref="350" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="375" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane5" min="-2" pref="280" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane17">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="70" width="440" height="270"/>
+                    </Constraint>
+                  </Constraints>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable5">
+                    <Component class="javax.swing.JTable" name="aprilTbl">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
+                          <Table columnCount="7" rowCount="6">
                             <Column editable="true" title="Sun" type="java.lang.Object">
-                              <Data value="1"/>
-                              <Data value="8"/>
-                              <Data value="15"/>
-                              <Data value="22"/>
-                              <Data value="31"/>
-                            </Column>
-                            <Column editable="true" title="Mon" type="java.lang.Object">
-                              <Data value="2"/>
-                              <Data value="9"/>
-                              <Data value="16"/>
-                              <Data value="23"/>
                               <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Tues" type="java.lang.Object">
                               <Data value="3"/>
                               <Data value="10"/>
                               <Data value="17"/>
                               <Data value="24"/>
-                              <Data value=""/>
+                              <Data value="30"/>
                             </Column>
-                            <Column editable="true" title="Wed" type="java.lang.Object">
+                            <Column editable="true" title="Mon" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="4"/>
                               <Data value="11"/>
                               <Data value="18"/>
                               <Data value="25"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                            <Column editable="true" title="Tues" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="5"/>
                               <Data value="12"/>
                               <Data value="19"/>
                               <Data value="26"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Fri" type="java.lang.Object">
+                            <Column editable="true" title="Wed" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="6"/>
                               <Data value="13"/>
                               <Data value="20"/>
                               <Data value="27"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Sat" type="java.lang.Object">
+                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="7"/>
                               <Data value="14"/>
                               <Data value="21"/>
+                              <Data value="28"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Fri" type="java.lang.Object">
+                              <Data value="1"/>
+                              <Data value="8"/>
+                              <Data value="15"/>
+                              <Data value="22"/>
+                              <Data value="29"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Sat" type="java.lang.Object">
+                              <Data value="2"/>
+                              <Data value="9"/>
+                              <Data value="16"/>
+                              <Data value="23"/>
                               <Data value="30"/>
                               <Data value="null"/>
                             </Column>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                          <TableColumnModel selectionModel="0">
+                          <TableColumnModel selectionModel="1">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
@@ -464,14 +721,48 @@
                             </Column>
                           </TableColumnModel>
                         </Property>
+                        <Property name="columnSelectionAllowed" type="boolean" value="true"/>
                         <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="aprilTblMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JLabel" name="dateLbl2">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Dialog" size="14" style="3"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&lt;date&gt;"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="backBttn2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttn2ActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel7">
@@ -488,64 +779,49 @@
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane6" min="-2" pref="350" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="375" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane6" min="-2" pref="280" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane18">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="70" width="440" height="270"/>
+                    </Constraint>
+                  </Constraints>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable6">
+                    <Component class="javax.swing.JTable" name="mayTbl">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
+                          <Table columnCount="7" rowCount="6">
                             <Column editable="true" title="Sun" type="java.lang.Object">
                               <Data value="1"/>
                               <Data value="8"/>
                               <Data value="15"/>
                               <Data value="22"/>
-                              <Data value="31"/>
+                              <Data value="29"/>
+                              <Data value=""/>
                             </Column>
                             <Column editable="true" title="Mon" type="java.lang.Object">
                               <Data value="2"/>
                               <Data value="9"/>
                               <Data value="16"/>
                               <Data value="23"/>
-                              <Data value=""/>
+                              <Data value="30"/>
+                              <Data value="null"/>
                             </Column>
                             <Column editable="true" title="Tues" type="java.lang.Object">
                               <Data value="3"/>
                               <Data value="10"/>
                               <Data value="17"/>
                               <Data value="24"/>
-                              <Data value=""/>
+                              <Data value="29"/>
+                              <Data value="null"/>
                             </Column>
                             <Column editable="true" title="Wed" type="java.lang.Object">
                               <Data value="4"/>
@@ -553,6 +829,7 @@
                               <Data value="18"/>
                               <Data value="25"/>
                               <Data value=""/>
+                              <Data value="null"/>
                             </Column>
                             <Column editable="true" title="Thurs" type="java.lang.Object">
                               <Data value="5"/>
@@ -560,6 +837,7 @@
                               <Data value="19"/>
                               <Data value="26"/>
                               <Data value=""/>
+                              <Data value="null"/>
                             </Column>
                             <Column editable="true" title="Fri" type="java.lang.Object">
                               <Data value="6"/>
@@ -567,18 +845,20 @@
                               <Data value="20"/>
                               <Data value="27"/>
                               <Data value=""/>
+                              <Data value="null"/>
                             </Column>
                             <Column editable="true" title="Sat" type="java.lang.Object">
                               <Data value="7"/>
                               <Data value="14"/>
                               <Data value="21"/>
-                              <Data value="30"/>
+                              <Data value="28"/>
+                              <Data value=""/>
                               <Data value="null"/>
                             </Column>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                          <TableColumnModel selectionModel="0">
+                          <TableColumnModel selectionModel="1">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
@@ -616,14 +896,48 @@
                             </Column>
                           </TableColumnModel>
                         </Property>
+                        <Property name="columnSelectionAllowed" type="boolean" value="true"/>
                         <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="mayTblMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JLabel" name="dateLbl3">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Dialog" size="14" style="3"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&lt;date&gt;"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="backBttn3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttn3ActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel8">
@@ -640,97 +954,86 @@
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane7" min="-2" pref="350" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="375" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane7" min="-2" pref="280" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane19">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="70" width="440" height="270"/>
+                    </Constraint>
+                  </Constraints>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable7">
+                    <Component class="javax.swing.JTable" name="juneTbl">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
+                          <Table columnCount="7" rowCount="6">
                             <Column editable="true" title="Sun" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="5"/>
+                              <Data value="12"/>
+                              <Data value="19"/>
+                              <Data value="26"/>
+                              <Data value="30"/>
+                            </Column>
+                            <Column editable="true" title="Mon" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="6"/>
+                              <Data value="13"/>
+                              <Data value="20"/>
+                              <Data value="27"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Tues" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="7"/>
+                              <Data value="14"/>
+                              <Data value="21"/>
+                              <Data value="28"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Wed" type="java.lang.Object">
                               <Data value="1"/>
                               <Data value="8"/>
                               <Data value="15"/>
                               <Data value="22"/>
-                              <Data value="31"/>
+                              <Data value="29"/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Mon" type="java.lang.Object">
+                            <Column editable="true" title="Thurs" type="java.lang.Object">
                               <Data value="2"/>
                               <Data value="9"/>
                               <Data value="16"/>
                               <Data value="23"/>
-                              <Data value=""/>
+                              <Data value="30"/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Tues" type="java.lang.Object">
+                            <Column editable="true" title="Fri" type="java.lang.Object">
                               <Data value="3"/>
                               <Data value="10"/>
                               <Data value="17"/>
                               <Data value="24"/>
                               <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Wed" type="java.lang.Object">
+                            <Column editable="true" title="Sat" type="java.lang.Object">
                               <Data value="4"/>
                               <Data value="11"/>
                               <Data value="18"/>
                               <Data value="25"/>
                               <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Thurs" type="java.lang.Object">
-                              <Data value="5"/>
-                              <Data value="12"/>
-                              <Data value="19"/>
-                              <Data value="26"/>
-                              <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Fri" type="java.lang.Object">
-                              <Data value="6"/>
-                              <Data value="13"/>
-                              <Data value="20"/>
-                              <Data value="27"/>
-                              <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Sat" type="java.lang.Object">
-                              <Data value="7"/>
-                              <Data value="14"/>
-                              <Data value="21"/>
-                              <Data value="30"/>
                               <Data value="null"/>
                             </Column>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                          <TableColumnModel selectionModel="0">
+                          <TableColumnModel selectionModel="1">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
@@ -768,14 +1071,48 @@
                             </Column>
                           </TableColumnModel>
                         </Property>
+                        <Property name="columnSelectionAllowed" type="boolean" value="true"/>
                         <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="juneTblMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JLabel" name="dateLbl4">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Dialog" size="14" style="3"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&lt;date&gt;"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="backBttn4">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttn4ActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel9">
@@ -792,97 +1129,86 @@
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane8" min="-2" pref="350" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="375" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane8" min="-2" pref="280" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane8">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane26">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="70" width="440" height="270"/>
+                    </Constraint>
+                  </Constraints>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable8">
+                    <Component class="javax.swing.JTable" name="julyTbl">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
+                          <Table columnCount="7" rowCount="6">
                             <Column editable="true" title="Sun" type="java.lang.Object">
-                              <Data value="1"/>
-                              <Data value="8"/>
-                              <Data value="15"/>
-                              <Data value="22"/>
-                              <Data value="31"/>
-                            </Column>
-                            <Column editable="true" title="Mon" type="java.lang.Object">
-                              <Data value="2"/>
-                              <Data value="9"/>
-                              <Data value="16"/>
-                              <Data value="23"/>
                               <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Tues" type="java.lang.Object">
                               <Data value="3"/>
                               <Data value="10"/>
                               <Data value="17"/>
                               <Data value="24"/>
-                              <Data value=""/>
+                              <Data value="30"/>
                             </Column>
-                            <Column editable="true" title="Wed" type="java.lang.Object">
+                            <Column editable="true" title="Mon" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="4"/>
                               <Data value="11"/>
                               <Data value="18"/>
                               <Data value="25"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                            <Column editable="true" title="Tues" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="5"/>
                               <Data value="12"/>
                               <Data value="19"/>
                               <Data value="26"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Fri" type="java.lang.Object">
+                            <Column editable="true" title="Wed" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="6"/>
                               <Data value="13"/>
                               <Data value="20"/>
                               <Data value="27"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Sat" type="java.lang.Object">
+                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="7"/>
                               <Data value="14"/>
                               <Data value="21"/>
+                              <Data value="28"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Fri" type="java.lang.Object">
+                              <Data value="1"/>
+                              <Data value="8"/>
+                              <Data value="15"/>
+                              <Data value="22"/>
+                              <Data value="29"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Sat" type="java.lang.Object">
+                              <Data value="2"/>
+                              <Data value="9"/>
+                              <Data value="16"/>
+                              <Data value="23"/>
                               <Data value="30"/>
                               <Data value="null"/>
                             </Column>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                          <TableColumnModel selectionModel="0">
+                          <TableColumnModel selectionModel="1">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
@@ -920,14 +1246,48 @@
                             </Column>
                           </TableColumnModel>
                         </Property>
+                        <Property name="columnSelectionAllowed" type="boolean" value="true"/>
                         <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="julyTblMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JLabel" name="dateLbl5">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Dialog" size="14" style="3"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&lt;date&gt;"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="backBttn5">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttn5ActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel10">
@@ -944,97 +1304,86 @@
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane9" min="-2" pref="350" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="375" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane9" min="-2" pref="280" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane9">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane20">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="70" width="440" height="270"/>
+                    </Constraint>
+                  </Constraints>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable9">
+                    <Component class="javax.swing.JTable" name="augTbl">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
+                          <Table columnCount="7" rowCount="6">
                             <Column editable="true" title="Sun" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="7"/>
+                              <Data value="14"/>
+                              <Data value="21"/>
+                              <Data value="28"/>
+                              <Data value="30"/>
+                            </Column>
+                            <Column editable="true" title="Mon" type="java.lang.Object">
                               <Data value="1"/>
                               <Data value="8"/>
                               <Data value="15"/>
                               <Data value="22"/>
-                              <Data value="31"/>
+                              <Data value="29"/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Mon" type="java.lang.Object">
+                            <Column editable="true" title="Tues" type="java.lang.Object">
                               <Data value="2"/>
                               <Data value="9"/>
                               <Data value="16"/>
                               <Data value="23"/>
-                              <Data value=""/>
+                              <Data value="30"/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Tues" type="java.lang.Object">
+                            <Column editable="true" title="Wed" type="java.lang.Object">
                               <Data value="3"/>
                               <Data value="10"/>
                               <Data value="17"/>
                               <Data value="24"/>
-                              <Data value=""/>
+                              <Data value="31"/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Wed" type="java.lang.Object">
+                            <Column editable="true" title="Thurs" type="java.lang.Object">
                               <Data value="4"/>
                               <Data value="11"/>
                               <Data value="18"/>
                               <Data value="25"/>
                               <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                            <Column editable="true" title="Fri" type="java.lang.Object">
                               <Data value="5"/>
                               <Data value="12"/>
                               <Data value="19"/>
                               <Data value="26"/>
                               <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Fri" type="java.lang.Object">
+                            <Column editable="true" title="Sat" type="java.lang.Object">
                               <Data value="6"/>
                               <Data value="13"/>
                               <Data value="20"/>
                               <Data value="27"/>
                               <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Sat" type="java.lang.Object">
-                              <Data value="7"/>
-                              <Data value="14"/>
-                              <Data value="21"/>
-                              <Data value="30"/>
                               <Data value="null"/>
                             </Column>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                          <TableColumnModel selectionModel="0">
+                          <TableColumnModel selectionModel="1">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
@@ -1072,14 +1421,48 @@
                             </Column>
                           </TableColumnModel>
                         </Property>
+                        <Property name="columnSelectionAllowed" type="boolean" value="true"/>
                         <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="augTblMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JLabel" name="dateLbl6">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Dialog" size="14" style="3"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&lt;date&gt;"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="backBttn6">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttn6ActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel11">
@@ -1096,97 +1479,86 @@
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane10" min="-2" pref="350" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="375" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane10" min="-2" pref="280" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane10">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane21">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="70" width="440" height="270"/>
+                    </Constraint>
+                  </Constraints>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable10">
+                    <Component class="javax.swing.JTable" name="septTbl">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
+                          <Table columnCount="7" rowCount="6">
                             <Column editable="true" title="Sun" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="4"/>
+                              <Data value="11"/>
+                              <Data value="18"/>
+                              <Data value="25"/>
+                              <Data value="30"/>
+                            </Column>
+                            <Column editable="true" title="Mon" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="5"/>
+                              <Data value="12"/>
+                              <Data value="19"/>
+                              <Data value="26"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Tues" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="6"/>
+                              <Data value="13"/>
+                              <Data value="20"/>
+                              <Data value="27"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Wed" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="7"/>
+                              <Data value="14"/>
+                              <Data value="21"/>
+                              <Data value="28"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Thurs" type="java.lang.Object">
                               <Data value="1"/>
                               <Data value="8"/>
                               <Data value="15"/>
                               <Data value="22"/>
-                              <Data value="31"/>
+                              <Data value="29"/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Mon" type="java.lang.Object">
+                            <Column editable="true" title="Fri" type="java.lang.Object">
                               <Data value="2"/>
                               <Data value="9"/>
                               <Data value="16"/>
                               <Data value="23"/>
-                              <Data value=""/>
+                              <Data value="30"/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Tues" type="java.lang.Object">
+                            <Column editable="true" title="Sat" type="java.lang.Object">
                               <Data value="3"/>
                               <Data value="10"/>
                               <Data value="17"/>
                               <Data value="24"/>
                               <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Wed" type="java.lang.Object">
-                              <Data value="4"/>
-                              <Data value="11"/>
-                              <Data value="18"/>
-                              <Data value="25"/>
-                              <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Thurs" type="java.lang.Object">
-                              <Data value="5"/>
-                              <Data value="12"/>
-                              <Data value="19"/>
-                              <Data value="26"/>
-                              <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Fri" type="java.lang.Object">
-                              <Data value="6"/>
-                              <Data value="13"/>
-                              <Data value="20"/>
-                              <Data value="27"/>
-                              <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Sat" type="java.lang.Object">
-                              <Data value="7"/>
-                              <Data value="14"/>
-                              <Data value="21"/>
-                              <Data value="30"/>
                               <Data value="null"/>
                             </Column>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                          <TableColumnModel selectionModel="0">
+                          <TableColumnModel selectionModel="1">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
@@ -1224,14 +1596,48 @@
                             </Column>
                           </TableColumnModel>
                         </Property>
+                        <Property name="columnSelectionAllowed" type="boolean" value="true"/>
                         <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="septTblMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JLabel" name="dateLbl7">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Dialog" size="14" style="3"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&lt;date&gt;"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="backBttn7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttn7ActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel12">
@@ -1248,97 +1654,86 @@
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane11" min="-2" pref="350" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="375" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane11" min="-2" pref="280" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane11">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane22">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="70" width="440" height="270"/>
+                    </Constraint>
+                  </Constraints>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable11">
+                    <Component class="javax.swing.JTable" name="octTbl">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
+                          <Table columnCount="7" rowCount="6">
                             <Column editable="true" title="Sun" type="java.lang.Object">
-                              <Data value="1"/>
-                              <Data value="8"/>
-                              <Data value="15"/>
-                              <Data value="22"/>
-                              <Data value="31"/>
-                            </Column>
-                            <Column editable="true" title="Mon" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="2"/>
                               <Data value="9"/>
                               <Data value="16"/>
                               <Data value="23"/>
-                              <Data value=""/>
+                              <Data value="30"/>
                             </Column>
-                            <Column editable="true" title="Tues" type="java.lang.Object">
+                            <Column editable="true" title="Mon" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="3"/>
                               <Data value="10"/>
                               <Data value="17"/>
                               <Data value="24"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Wed" type="java.lang.Object">
+                            <Column editable="true" title="Tues" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="4"/>
                               <Data value="11"/>
                               <Data value="18"/>
                               <Data value="25"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                            <Column editable="true" title="Wed" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="5"/>
                               <Data value="12"/>
                               <Data value="19"/>
                               <Data value="26"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Fri" type="java.lang.Object">
+                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="6"/>
                               <Data value="13"/>
                               <Data value="20"/>
                               <Data value="27"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Sat" type="java.lang.Object">
+                            <Column editable="true" title="Fri" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="7"/>
                               <Data value="14"/>
                               <Data value="21"/>
-                              <Data value="30"/>
+                              <Data value="28"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Sat" type="java.lang.Object">
+                              <Data value="1"/>
+                              <Data value="8"/>
+                              <Data value="15"/>
+                              <Data value="22"/>
+                              <Data value="29"/>
                               <Data value="null"/>
                             </Column>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                          <TableColumnModel selectionModel="0">
+                          <TableColumnModel selectionModel="1">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
@@ -1377,13 +1772,46 @@
                           </TableColumnModel>
                         </Property>
                         <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="octTblMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JLabel" name="dateLbl8">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Dialog" size="14" style="3"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&lt;date&gt;"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="backBttn8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttn8ActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel13">
@@ -1400,97 +1828,86 @@
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane12" min="-2" pref="350" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="375" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane12" min="-2" pref="280" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane12">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane23">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="70" width="440" height="270"/>
+                    </Constraint>
+                  </Constraints>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable12">
+                    <Component class="javax.swing.JTable" name="novTbl">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
+                          <Table columnCount="7" rowCount="6">
                             <Column editable="true" title="Sun" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="6"/>
+                              <Data value="13"/>
+                              <Data value="20"/>
+                              <Data value="27"/>
+                              <Data value="30"/>
+                            </Column>
+                            <Column editable="true" title="Mon" type="java.lang.Object">
+                              <Data value=""/>
+                              <Data value="7"/>
+                              <Data value="14"/>
+                              <Data value="21"/>
+                              <Data value="28"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Tues" type="java.lang.Object">
                               <Data value="1"/>
                               <Data value="8"/>
                               <Data value="15"/>
                               <Data value="22"/>
-                              <Data value="31"/>
+                              <Data value="29"/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Mon" type="java.lang.Object">
+                            <Column editable="true" title="Wed" type="java.lang.Object">
                               <Data value="2"/>
                               <Data value="9"/>
                               <Data value="16"/>
                               <Data value="23"/>
-                              <Data value=""/>
+                              <Data value="30"/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Tues" type="java.lang.Object">
+                            <Column editable="true" title="Thurs" type="java.lang.Object">
                               <Data value="3"/>
                               <Data value="10"/>
                               <Data value="17"/>
                               <Data value="24"/>
                               <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Wed" type="java.lang.Object">
+                            <Column editable="true" title="Fri" type="java.lang.Object">
                               <Data value="4"/>
                               <Data value="11"/>
                               <Data value="18"/>
                               <Data value="25"/>
                               <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                            <Column editable="true" title="Sat" type="java.lang.Object">
                               <Data value="5"/>
                               <Data value="12"/>
                               <Data value="19"/>
                               <Data value="26"/>
                               <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Fri" type="java.lang.Object">
-                              <Data value="6"/>
-                              <Data value="13"/>
-                              <Data value="20"/>
-                              <Data value="27"/>
-                              <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Sat" type="java.lang.Object">
-                              <Data value="7"/>
-                              <Data value="14"/>
-                              <Data value="21"/>
-                              <Data value="30"/>
                               <Data value="null"/>
                             </Column>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                          <TableColumnModel selectionModel="0">
+                          <TableColumnModel selectionModel="1">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
@@ -1528,14 +1945,48 @@
                             </Column>
                           </TableColumnModel>
                         </Property>
+                        <Property name="columnSelectionAllowed" type="boolean" value="true"/>
                         <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="novTblMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JLabel" name="dateLbl9">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Dialog" size="14" style="3"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&lt;date&gt;"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="backBttn9">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttn9ActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel3">
@@ -1552,97 +2003,86 @@
                 </Constraint>
               </Constraints>
 
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane13" min="-2" pref="350" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="375" max="32767" attributes="0"/>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane13" min="-2" pref="280" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                <Property name="useNullLayout" type="boolean" value="false"/>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane13">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane24">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="70" width="440" height="270"/>
+                    </Constraint>
+                  </Constraints>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable13">
+                    <Component class="javax.swing.JTable" name="decTbl">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
+                          <Table columnCount="7" rowCount="6">
                             <Column editable="true" title="Sun" type="java.lang.Object">
-                              <Data value="1"/>
-                              <Data value="8"/>
-                              <Data value="15"/>
-                              <Data value="22"/>
-                              <Data value="31"/>
-                            </Column>
-                            <Column editable="true" title="Mon" type="java.lang.Object">
-                              <Data value="2"/>
-                              <Data value="9"/>
-                              <Data value="16"/>
-                              <Data value="23"/>
                               <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Tues" type="java.lang.Object">
-                              <Data value="3"/>
-                              <Data value="10"/>
-                              <Data value="17"/>
-                              <Data value="24"/>
-                              <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Wed" type="java.lang.Object">
                               <Data value="4"/>
                               <Data value="11"/>
                               <Data value="18"/>
                               <Data value="25"/>
-                              <Data value=""/>
+                              <Data value="30"/>
                             </Column>
-                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                            <Column editable="true" title="Mon" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="5"/>
                               <Data value="12"/>
                               <Data value="19"/>
                               <Data value="26"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Fri" type="java.lang.Object">
+                            <Column editable="true" title="Tues" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="6"/>
                               <Data value="13"/>
                               <Data value="20"/>
                               <Data value="27"/>
-                              <Data value=""/>
+                              <Data value="null"/>
                             </Column>
-                            <Column editable="true" title="Sat" type="java.lang.Object">
+                            <Column editable="true" title="Wed" type="java.lang.Object">
+                              <Data value=""/>
                               <Data value="7"/>
                               <Data value="14"/>
                               <Data value="21"/>
+                              <Data value="28"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Thurs" type="java.lang.Object">
+                              <Data value="1"/>
+                              <Data value="8"/>
+                              <Data value="15"/>
+                              <Data value="22"/>
+                              <Data value="29"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Fri" type="java.lang.Object">
+                              <Data value="2"/>
+                              <Data value="9"/>
+                              <Data value="16"/>
+                              <Data value="23"/>
                               <Data value="30"/>
+                              <Data value="null"/>
+                            </Column>
+                            <Column editable="true" title="Sat" type="java.lang.Object">
+                              <Data value="3"/>
+                              <Data value="10"/>
+                              <Data value="17"/>
+                              <Data value="24"/>
+                              <Data value="31"/>
                               <Data value="null"/>
                             </Column>
                           </Table>
                         </Property>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-                          <TableColumnModel selectionModel="0">
+                          <TableColumnModel selectionModel="1">
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
@@ -1680,142 +2120,47 @@
                             </Column>
                           </TableColumnModel>
                         </Property>
+                        <Property name="columnSelectionAllowed" type="boolean" value="true"/>
                         <Property name="rowHeight" type="int" value="50"/>
+                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="decTblMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
-              </SubComponents>
-            </Container>
-            <Container class="javax.swing.JPanel" name="jPanel4">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="66" red="99" type="rgb"/>
-                </Property>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="Feb">
-                    <Property name="tabTitle" type="java.lang.String" value="Feb"/>
-                  </JTabbedPaneConstraints>
-                </Constraint>
-              </Constraints>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" pref="210" max="-2" attributes="0"/>
-                          <EmptySpace pref="189" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane3" min="-2" pref="373" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace pref="333" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jScrollPane3" min="-2" pref="270" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane3">
-                  <AuxValues>
-                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                  </AuxValues>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                  <SubComponents>
-                    <Component class="javax.swing.JTable" name="jTable3">
-                      <Properties>
-                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="5">
-                            <Column editable="true" title="Sun" type="java.lang.Object">
-                              <Data value=""/>
-                              <Data value="5"/>
-                              <Data value="12"/>
-                              <Data value="19"/>
-                              <Data value="26"/>
-                            </Column>
-                            <Column editable="true" title="Mon" type="java.lang.Object">
-                              <Data value=""/>
-                              <Data value="6"/>
-                              <Data value="13"/>
-                              <Data value="20"/>
-                              <Data value="27"/>
-                            </Column>
-                            <Column editable="true" title="Tues" type="java.lang.Object">
-                              <Data value=""/>
-                              <Data value="7"/>
-                              <Data value="14"/>
-                              <Data value="21"/>
-                              <Data value="28"/>
-                            </Column>
-                            <Column editable="true" title="Wed" type="java.lang.Object">
-                              <Data value="1"/>
-                              <Data value="8"/>
-                              <Data value="15"/>
-                              <Data value="22"/>
-                              <Data value="29"/>
-                            </Column>
-                            <Column editable="true" title="Thurs" type="java.lang.Object">
-                              <Data value="2"/>
-                              <Data value="9"/>
-                              <Data value="16"/>
-                              <Data value="23"/>
-                              <Data value="30"/>
-                            </Column>
-                            <Column editable="true" title="Fri" type="java.lang.Object">
-                              <Data value="3"/>
-                              <Data value="10"/>
-                              <Data value="17"/>
-                              <Data value="24"/>
-                              <Data value=""/>
-                            </Column>
-                            <Column editable="true" title="Sat" type="java.lang.Object">
-                              <Data value="4"/>
-                              <Data value="11"/>
-                              <Data value="18"/>
-                              <Data value="25"/>
-                              <Data value="null"/>
-                            </Column>
-                          </Table>
-                        </Property>
-                        <Property name="rowHeight" type="int" value="50"/>
-                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
-                        </Property>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Component class="javax.swing.JLabel" name="jLabel2">
+                <Component class="javax.swing.JLabel" name="dateLbl10">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="cc" green="66" red="0" type="rgb"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="3"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&lt;date&gt;"/>
                   </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="150" y="20" width="180" height="30"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JButton" name="backBttn10">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Back"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBttn10ActionPerformed"/>
+                  </Events>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="10" width="70" height="20"/>
+                    </Constraint>
+                  </Constraints>
                 </Component>
               </SubComponents>
             </Container>
